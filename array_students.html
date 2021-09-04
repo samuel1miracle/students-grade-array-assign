@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Work</title>
+</head>
+<body>
+
+
+    <!-- //QUESTIONS
+
+    ASSIGNMENT!!! TO BE SUBMITTED BY 8PM TODAY!!
+
+Create a multidimensional array of Students containing the following data 
+for each student:
+
+Student name, score, subject, term(e.g 1st term). 
+
+1. Calculate the average score for each student(1st,2nd & 3rd position)
+
+2. Calculate the percentage of each student score. If any student score is
+ above 75% recommend the student for a government scholarship
+
+ELSE
+
+If any student score is below 40% ask the student to REPEAT the class.
+
+Sample:  students = [
+    ["Miracle", 80, "physics",3],    ["bolanle", 60, "maths",2]
+]
+
+// formula solving: (score/100) +%+ -->
+
+
+
+    <SCript>
+
+//MULTI ARRAYS DATAS
+
+
+let studentsGrade = 
+ [
+     ['Miracle', 16, 'Computer', '3rd Term'],
+     ['Samuel', 10, 'Chemisty', '1st Term'],
+     ['Anita', 14, 'Physics', '3rd Term'],
+     ['Williams', 9, 'Economics', '2nd Term'],
+     ['Kenneth', 10, 'Civic', '3rd Term'],
+     ['Prince', 7, 'Physics', '2nd Term'],
+     ['Ekene', 9, 'Computer', '3rd Term'],
+     ['Joshua', 14, 'Agriculture', '1st Term'],
+     ['David', 6, 'Hausa', '3rd Term'],
+     ['Sandra', 14, 'Computer', '2nd Term'],
+     ['Nwachukwu', 7, 'History', '3rd Term'],
+     ['Success', 12, 'Marketing', '1st Term'],
+     ['Felix', 9, 'Government', '3rd Term'],
+     ['Banner', 18, 'Computer', '2nd Term'],
+     ['Godswill', 14, 'Physics', '3rd Term'],
+     ['Andy', 12, 'Computer', '1st Term'],
+     ['Obianuju', 7, 'Literature', '3rd Term'],
+     ['Amaka', 14, 'Biology', '2nd Term'],
+     ['Thelma', 10, 'Mathematics', '3rd Term'],
+     ['Blessing', 7, 'French', '1st Term']
+ ]
+ 
+
+//ANSWER TO QUESTION 1
+
+
+
+ //we will loop through the students data to get what we need to work with
+
+ for(let i = 0; i < studentsGrade.length; i++)
+
+ studentsGrade.forEach(studentsGrade=>{
+
+     let average = (studentsGrade[2]/20);
+
+     studentsGrade.splice(0, average +'Average');
+
+     return studentsGrade;
+ });
+
+
+console.log(studentsGrade);
+
+
+
+
+    //ANSWER TO QUESTION 2: a&b
+
+
+ //the formula to get the percentage will be (score/20*100) +%+
+
+
+
+ //this is to execute this function for each array
+      studentsGrade.forEach(studentsGrade=> {
+///the solving formula in use here
+          let percentage = (studentsGrade[1]/20)*100
+
+         studentsGrade.splice(//this will create another column 
+         //at index 2 to add the percentages 
+         //for each students without deleting anything
+            2,0,percentage 
+            //to output the nums concatenated with this symbol
+            +'%') 
+
+      });
+      
+      console.table(studentsGrade);
+
+
+ //using a .table method to display the final answers to the browser console
+if (studentsGrade [2] > 70); {
+    console.log(studentsGrade, 'congratulations, you have performed excellently well and therefore, you have been recommended by the school authority for a governmnt scholarship')
+
+}  (studentsGrade [2] < 40); {
+    console.log(studentsGrade, 'Sorry, you have failed this class and therefore will repeat this class for the next one year')
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </SCript>
+
+
+
+</body>
+</html>
